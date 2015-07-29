@@ -9,8 +9,8 @@ class Degenera(object):
         self.type = type
 
     def degenerate(self):
-        if self._check_arguments() == 'ok':
-            print("proceed")
+        self._check_arguments()
+        # proceed
 
     def _check_arguments(self):
         if self.dna is None:
@@ -30,4 +30,3 @@ class Degenera(object):
             raise WrongParameterError('Please use one of the following choices for'
                                       ' the Degenerate.type parameter:'
                                       '\n"normal", "S", "Z", or "SZ"')
-        return 'ok'

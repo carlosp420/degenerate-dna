@@ -3,3 +3,6 @@
 __version__ = '0.0.0'
 __author__ = 'Carlos Pena <mycalesis@gmail.com>'
 __all__ = []
+
+
+from .api import Degenera

@@ -1,13 +1,13 @@
-degenerate-dna
-==============
-
-.. image:: https://pypip.in/v/degenerate-dna/badge.png
+.. image:: https://badge.fury.io/py/degenerate-dna.svg
     :target: https://pypi.python.org/pypi/degenerate-dna
     :alt: Latest PyPI version
 
 .. image:: https://travis-ci.org/carlosp420/degenerate-dna.png
    :target: https://travis-ci.org/carlosp420/degenerate-dna
    :alt: Latest Travis CI build status
+
+degenerate-dna
+==============
 
 Python implementation of the Degen Perl package by Zwick et al.
 

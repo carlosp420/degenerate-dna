@@ -319,7 +319,7 @@ degen_table_1 = {
 
 
 # Degen S: Serine1 and Serine 2 -> Serine 1
-degen_S = degen_table_1
+degen_S = degen_table_1.copy()
 degen_S['TCT'] = 'AGY'
 degen_S['TCA'] = 'AGY'
 degen_S['TCC'] = 'AGY'
@@ -341,7 +341,7 @@ degen_S['AGY'] = 'AGY'
 
 
 # Degen Z: Serine1 and Serine 2 -> Serine 2
-degen_Z = degen_table_1
+degen_Z = degen_table_1.copy()
 degen_Z['TCT'] = 'TCN'
 degen_Z['TCA'] = 'TCN'
 degen_Z['TCC'] = 'TCN'
@@ -363,7 +363,7 @@ degen_Z['AGY'] = 'TCN'
 
 
 # Degen SZ: Serine1 and Serine 2 -> NNN
-degen_SZ = degen_table_1
+degen_SZ = degen_table_1.copy()
 degen_SZ['TCT'] = 'NNN'
 degen_SZ['TCA'] = 'NNN'
 degen_SZ['TCC'] = 'NNN'

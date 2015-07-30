@@ -10,3 +10,6 @@ coverage: clean-test
 	coverage run --source degenerate_dna setup.py test
 	coverage report -m
 	coverage html
+
+release:
+	python setup.py sdist bdist_wheel upload

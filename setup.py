@@ -19,7 +19,7 @@ setuptools.setup(
 
     classifiers=[
         'License :: OSI Approved :: BSD License',
-        'Development Status :: 0 - Pre-Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',

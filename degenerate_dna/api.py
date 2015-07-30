@@ -97,7 +97,7 @@ class Degenera(object):
         if re.search(pattern, value) is not None:
             return 'NNN'
         else:
-            return tmp_codon
+            return value
 
     def _clean_string(self, tmp_codon):
         out = tmp_codon.upper()

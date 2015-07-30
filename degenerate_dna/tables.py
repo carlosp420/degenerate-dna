@@ -1,5 +1,6 @@
 """Degenerated tables go here.
 """
+# Standard Code
 degen_table_1 = {
     # Arginine1, Arginine2 & Serine2
     'CGA': 'MGN',
@@ -310,8 +311,74 @@ degen_table_1 = {
     'GGX': 'GGN',
 
     # degen
-    'NNNN': 'NNN',
+    'NNN': 'NNN',
 
     # indel
     '---': '---',
 }
+
+
+# Degen S: Serine1 and Serine 2 -> Serine 1
+degen_S = degen_table_1
+degen_S['TCT'] = 'AGY'
+degen_S['TCA'] = 'AGY'
+degen_S['TCC'] = 'AGY'
+degen_S['TCG'] = 'AGY'
+degen_S['TCR'] = 'AGY'
+degen_S['TCY'] = 'AGY'
+degen_S['TCM'] = 'AGY'
+degen_S['TCK'] = 'AGY'
+degen_S['TCS'] = 'AGY'
+degen_S['TCW'] = 'AGY'
+degen_S['TCH'] = 'AGY'
+degen_S['TCB'] = 'AGY'
+degen_S['TCV'] = 'AGY'
+degen_S['TCD'] = 'AGY'
+degen_S['TCN'] = 'AGY'
+degen_S['AGT'] = 'AGY'
+degen_S['AGC'] = 'AGY'
+degen_S['AGY'] = 'AGY'
+
+
+# Degen Z: Serine1 and Serine 2 -> Serine 2
+degen_Z = degen_table_1
+degen_Z['TCT'] = 'TCN'
+degen_Z['TCA'] = 'TCN'
+degen_Z['TCC'] = 'TCN'
+degen_Z['TCG'] = 'TCN'
+degen_Z['TCR'] = 'TCN'
+degen_Z['TCY'] = 'TCN'
+degen_Z['TCM'] = 'TCN'
+degen_Z['TCK'] = 'TCN'
+degen_Z['TCS'] = 'TCN'
+degen_Z['TCW'] = 'TCN'
+degen_Z['TCH'] = 'TCN'
+degen_Z['TCB'] = 'TCN'
+degen_Z['TCV'] = 'TCN'
+degen_Z['TCD'] = 'TCN'
+degen_Z['TCN'] = 'TCN'
+degen_Z['AGT'] = 'TCN'
+degen_Z['AGC'] = 'TCN'
+degen_Z['AGY'] = 'TCN'
+
+
+# Degen SZ: Serine1 and Serine 2 -> NNN
+degen_SZ = degen_table_1
+degen_SZ['TCT'] = 'NNN'
+degen_SZ['TCA'] = 'NNN'
+degen_SZ['TCC'] = 'NNN'
+degen_SZ['TCG'] = 'NNN'
+degen_SZ['TCR'] = 'NNN'
+degen_SZ['TCY'] = 'NNN'
+degen_SZ['TCM'] = 'NNN'
+degen_SZ['TCK'] = 'NNN'
+degen_SZ['TCS'] = 'NNN'
+degen_SZ['TCW'] = 'NNN'
+degen_SZ['TCH'] = 'NNN'
+degen_SZ['TCB'] = 'NNN'
+degen_SZ['TCV'] = 'NNN'
+degen_SZ['TCD'] = 'NNN'
+degen_SZ['TCN'] = 'NNN'
+degen_SZ['AGT'] = 'NNN'
+degen_SZ['AGC'] = 'NNN'
+degen_SZ['AGY'] = 'NNN'

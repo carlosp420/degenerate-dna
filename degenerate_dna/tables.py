@@ -318,8 +318,10 @@ degen_table_1 = {
     '---': '---',
 
     # Stop codons
+    'TAG': 'TAG',
     'TGA': 'TGA',
     'TAA': 'TAA',
+    'TAR': 'TAR',
 }
 
 

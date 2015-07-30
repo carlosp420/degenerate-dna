@@ -44,8 +44,12 @@ class Degenera(object):
             if '-' in codon:
                 append(codon)
             else:
-                degen_codon = this_table[codon]
-                append(degen_codon)
+                try:
+                    degen_codon = this_table[codon]
+                    append(degen_codon)
+                except KeyError:
+                    warnings.warn('Codon {} cannot be degenerated'.format(codon), DegenerateWarning)
+                    append(codon)
         self.degenerated = ''.join(out)
 
     def _check_arguments(self):

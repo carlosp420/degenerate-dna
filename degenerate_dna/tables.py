@@ -322,6 +322,7 @@ degen_table_1 = {
     'TGA': 'TGA',
     'TAA': 'TAA',
     'TAR': 'TAR',
+    'TAN': 'TAN',
 }
 
 

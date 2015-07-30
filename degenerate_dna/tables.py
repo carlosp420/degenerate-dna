@@ -1,5 +1,6 @@
 """Degenerated tables go here.
 """
+# =========================================
 # Standard Code
 degen_table_1 = {
     # Arginine1, Arginine2 & Serine2
@@ -315,9 +316,14 @@ degen_table_1 = {
 
     # indel
     '---': '---',
+
+    # Stop codons
+    'TGA': 'TGA',
+    'TAA': 'TAA',
 }
 
 
+# =========================================
 # Degen S: Serine1 and Serine 2 -> Serine 1
 degen_S = degen_table_1.copy()
 degen_S['TCT'] = 'AGY'
@@ -340,6 +346,7 @@ degen_S['AGC'] = 'AGY'
 degen_S['AGY'] = 'AGY'
 
 
+# =========================================
 # Degen Z: Serine1 and Serine 2 -> Serine 2
 degen_Z = degen_table_1.copy()
 degen_Z['TCT'] = 'TCN'
@@ -362,6 +369,7 @@ degen_Z['AGC'] = 'TCN'
 degen_Z['AGY'] = 'TCN'
 
 
+# =========================================
 # Degen SZ: Serine1 and Serine 2 -> NNN
 degen_SZ = degen_table_1.copy()
 degen_SZ['TCT'] = 'NNN'
@@ -382,3 +390,78 @@ degen_SZ['TCN'] = 'NNN'
 degen_SZ['AGT'] = 'NNN'
 degen_SZ['AGC'] = 'NNN'
 degen_SZ['AGY'] = 'NNN'
+
+
+# =========================================
+# Invertebrate mitochondrial code
+degen_table_5 = degen_table_1.copy()
+# Arg
+degen_table_5['CGT'] = 'CGN'
+degen_table_5['CGA'] = 'CGN'
+degen_table_5['CGC'] = 'CGN'
+degen_table_5['CGG'] = 'CGN'
+degen_table_5['CGR'] = 'CGN'
+degen_table_5['CGY'] = 'CGN'
+degen_table_5['CGM'] = 'CGN'
+degen_table_5['CGK'] = 'CGN'
+degen_table_5['CGS'] = 'CGN'
+degen_table_5['CGW'] = 'CGN'
+degen_table_5['CGH'] = 'CGN'
+degen_table_5['CGB'] = 'CGN'
+degen_table_5['CGV'] = 'CGN'
+degen_table_5['CGD'] = 'CGN'
+degen_table_5['CGN'] = 'CGN'
+
+# Ser2
+degen_table_5['AGT'] = 'AGN'
+degen_table_5['AGA'] = 'AGN'
+degen_table_5['AGC'] = 'AGN'
+degen_table_5['AGG'] = 'AGN'
+degen_table_5['AGR'] = 'AGN'
+degen_table_5['AGY'] = 'AGN'
+degen_table_5['AGM'] = 'AGN'
+degen_table_5['AGK'] = 'AGN'
+degen_table_5['AGS'] = 'AGN'
+degen_table_5['AGW'] = 'AGN'
+degen_table_5['AGH'] = 'AGN'
+degen_table_5['AGB'] = 'AGN'
+degen_table_5['AGV'] = 'AGN'
+degen_table_5['AGD'] = 'AGN'
+degen_table_5['AGN'] = 'AGN'
+
+# Ile
+degen_table_5['ATT'] = 'ATY'
+degen_table_5['ATC'] = 'ATY'
+degen_table_5['ATY'] = 'ATY'
+
+# Ile & Met
+degen_table_5['ATM'] = 'ATN'
+degen_table_5['ATW'] = 'ATN'
+degen_table_5['ATS'] = 'ATN'
+degen_table_5['ATK'] = 'ATN'
+degen_table_5['ATV'] = 'ATN'
+degen_table_5['ATH'] = 'ATN'
+degen_table_5['ATD'] = 'ATN'
+degen_table_5['ATB'] = 'ATN'
+degen_table_5['ATN'] = 'ATN'
+
+# Met
+degen_table_5['ATG'] = 'ATR'
+degen_table_5['ATA'] = 'ATR'
+degen_table_5['ATR'] = 'ATR'
+
+# Cys & Trp
+degen_table_5['TGM'] = 'TGN'
+degen_table_5['TGW'] = 'TGN'
+degen_table_5['TGS'] = 'TGN'
+degen_table_5['TGK'] = 'TGN'
+degen_table_5['TGV'] = 'TGN'
+degen_table_5['TGH'] = 'TGN'
+degen_table_5['TGD'] = 'TGN'
+degen_table_5['TGB'] = 'TGN'
+degen_table_5['TGN'] = 'TGN'
+
+# Trp
+degen_table_5['TGG'] = 'TGR'
+degen_table_5['TGA'] = 'TGR'
+degen_table_5['TGR'] = 'TGR'

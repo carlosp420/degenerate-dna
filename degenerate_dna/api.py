@@ -3,7 +3,15 @@ from .exceptions import WrongParameterError
 
 
 class Degenera(object):
+    """Performs Zwick et al method for returning degenerated DNA sequences.
+
+    :param dna: DNA sequence as Python string.
+    :param table: Genbank notation for Translation Tables http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
+    :param type: Zwick's method for degeneration: normal, S, Z, or SZ.
+    :return: degenerated DNA sequence as Python string.
+    """
     def __init__(self, dna=None, table=None, type=None):
+
         self.dna = dna
         self.table = table
         self.type = type

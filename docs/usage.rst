@@ -1,14 +1,11 @@
 =====
 Usage
 =====
-This package BOLD can be used to interact with the BOLDSYSTEMS API. We can use
-methods to interact with the several end-points.
+This package ``degenerate-dna`` is a Python implementation of Zwick's et al method
+to degenerate DNA sequences.
 
-ID Engine API
--------------
-The ID Engine API is found at this URL:
-http://www.boldsystems.org/index.php/resources/api?type=idengine
-
+API
+---
 How to use it:
 
 .. doctest::

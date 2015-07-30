@@ -1,6 +1,6 @@
 """Degenerated tables go here.
 """
-degenerated_table_1 = {
+degen_table_1 = {
     # Arginine1, Arginine2 & Serine2
     'CGA': 'MGN',
     'CGC': 'MGN',

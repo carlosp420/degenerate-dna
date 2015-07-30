@@ -1,7 +1,7 @@
 import warnings
 
+from . import tables
 from ._warnings import DegenerateWarning
-from .tables import degen_table_1
 from .exceptions import MissingParameterError
 from .exceptions import WrongParameterError
 
@@ -23,6 +23,15 @@ class Degenera(object):
     def degenerate(self):
         self._check_arguments()
 
+        if self.table == 1 and self.type == 'normal':
+            this_table = tables.degen_table_1
+        elif self.table == 1 and self.type == 'S':
+            this_table = tables.degen_S
+        elif self.table == 1 and self.type == 'Z':
+            this_table = tables.degen_Z
+        elif self.table == 1 and self.type == 'SZ':
+            this_table = tables.degen_SZ
+
         # proceed
         # getting "inspiration" from Biopython
         # https://github.com/biopython/biopython/blob/master/Bio/Seq.py#L2035
@@ -39,7 +48,7 @@ class Degenera(object):
         append = out.append
         for i in range(0, n - n % 3, 3):
             codon = dna[i:i + 3]
-            degen_codon = degen_table_1[codon]
+            degen_codon = this_table[codon]
             append(degen_codon)
         self.degenerated = ''.join(out)
 
@@ -61,3 +70,8 @@ class Degenera(object):
             raise WrongParameterError('Please use one of the following choices for'
                                       ' the Degenerate.type parameter:'
                                       '\n"normal", "S", "Z", or "SZ"')
+
+        if self.type in type_choices and self.table != 1:
+            raise WrongParameterError('The type parameter "normal", "S", "Z",'
+                                      ' and "SZ" are only compatible with'
+                                      ' table = 1 (Standard Genetic code)')

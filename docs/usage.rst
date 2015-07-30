@@ -26,7 +26,7 @@ Degenerate using the Standard Genetic code and the method *S*.
     >>> res = Degenera(dna=dna, table=1, type='S')
     >>> res.degenerate()
     >>> res.degenerated
-    '---'
+    'AGYAGY'
 
 Degenerate using the Standard Genetic code and the method *Z*.
 
@@ -37,7 +37,7 @@ Degenerate using the Standard Genetic code and the method *Z*.
     >>> res = Degenera(dna=dna, table=1, type='Z')
     >>> res.degenerate()
     >>> res.degenerated
-    '---'
+    'TCNTCN'
 
 Degenerate using the Standard Genetic code and the method *SZ*.
 
@@ -48,4 +48,4 @@ Degenerate using the Standard Genetic code and the method *SZ*.
     >>> res = Degenera(dna=dna, table=1, type='SZ')
     >>> res.degenerate()
     >>> res.degenerated
-    '---'
+    'NNNNNN'

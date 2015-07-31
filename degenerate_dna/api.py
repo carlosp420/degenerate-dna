@@ -30,7 +30,8 @@ class Degenera(object):
         dna = str(self.dna)
         n = len(dna)
 
-        if n % 3 != 0:
+        partial_codon_remainder = n % 3
+        if partial_codon_remainder != 0:
             warnings.warn("Partial codon, len(sequence) not a multiple of three. "
                           "Explicitly trim the sequence or add trailing N before "
                           "translation. This may become an error in future.",
@@ -50,6 +51,12 @@ class Degenera(object):
                 except KeyError:
                     warnings.warn('Codon {} cannot be degenerated'.format(codon), DegenerateWarning)
                     append(codon)
+
+        # A few bases might have not been degenerated
+        if partial_codon_remainder == 1:
+            append(self.dna[-1:])
+        if partial_codon_remainder == 2:
+            append(self.dna[-2:])
         self.degenerated = ''.join(out)
 
     def _check_arguments(self):
@@ -91,8 +98,7 @@ class Degenera(object):
         if self.table == 5:
             this_table = tables.degen_table_5
         if this_table is None:
-            raise WrongParameterError(
-                'Only table 1 and 5 are implemented so far.')
+            raise WrongParameterError('Only table 1 and 5 are implemented so far.')
         return this_table
 
     def _convert_to_nnn_if_ambiguous_nt1_nt2(self, tmp_codon):

@@ -18,7 +18,7 @@ Usage
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AGTTCT'
-    >>> res = Degenera(dna=dna, table=1, type='S')
+    >>> res = Degenera(dna=dna, table=1, method='S')
     >>> res.degenerate()
     >>> res.degenerated
     'AGYAGY'

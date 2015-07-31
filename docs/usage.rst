@@ -12,7 +12,7 @@ Degenerate using the Standard Genetic code.
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AAC'
-    >>> res = Degenera(dna=dna, table=1, type='normal')
+    >>> res = Degenera(dna=dna, table=1, method='normal')
     >>> res.degenerate()
     >>> res.degenerated
     'AAY'
@@ -23,7 +23,7 @@ Degenerate using the Standard Genetic code and the method *S*.
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AGTTCT'
-    >>> res = Degenera(dna=dna, table=1, type='S')
+    >>> res = Degenera(dna=dna, table=1, method='S')
     >>> res.degenerate()
     >>> res.degenerated
     'AGYAGY'
@@ -34,7 +34,7 @@ Degenerate using the Standard Genetic code and the method *Z*.
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AGTTCT'
-    >>> res = Degenera(dna=dna, table=1, type='Z')
+    >>> res = Degenera(dna=dna, table=1, method='Z')
     >>> res.degenerate()
     >>> res.degenerated
     'TCNTCN'
@@ -45,7 +45,7 @@ Degenerate using the Standard Genetic code and the method *SZ*.
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AGTTCT'
-    >>> res = Degenera(dna=dna, table=1, type='SZ')
+    >>> res = Degenera(dna=dna, table=1, method='SZ')
     >>> res.degenerate()
     >>> res.degenerated
     'NNNNNN'

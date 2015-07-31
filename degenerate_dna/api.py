@@ -12,13 +12,13 @@ class Degenera(object):
 
     :param dna: DNA sequence as Python string.
     :param table: Genbank notation for Translation Tables http://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi
-    :param type: Zwick's method for degeneration: normal, S, Z, or SZ.
+    :param method: Zwick's method for degeneration: normal, S, Z, or SZ.
     :return: degenerated DNA sequence as Python string.
     """
-    def __init__(self, dna=None, table=None, type=None):
+    def __init__(self, dna=None, table=None, method=None):
         self.dna = dna
         self.table = table
-        self.type = type
+        self.method = method
         self.degenerated = None
 
     def degenerate(self):
@@ -53,7 +53,7 @@ class Degenera(object):
         self.degenerated = ''.join(out)
 
     def _check_arguments(self):
-        type_choices = ['normal', 'S', 'Z', 'SZ']
+        method_choices = ['normal', 'S', 'Z', 'SZ']
 
         if self.dna is None:
             raise MissingParameterError('Please enter a DNA string as input:'
@@ -62,31 +62,31 @@ class Degenera(object):
             raise MissingParameterError('Please enter a NCBI table code as input:'
                                         '\n>>> Degenera.table = 1')
         if self.table == 1:
-            if self.type is None:
-                raise MissingParameterError('Please enter a type of Degenerate code:'
-                                            '\n>>> Degenera.type = "normal"'
-                                            '\n>>> Degenera.type = "S"'
-                                            '\n>>> Degenera.type = "Z"'
-                                            '\n>>> Degenera.type = "SZ"')
-            if self.type not in type_choices:
+            if self.method is None:
+                raise MissingParameterError('Please enter a method of Degenerate code:'
+                                            '\n>>> Degenera.method = "normal"'
+                                            '\n>>> Degenera.method = "S"'
+                                            '\n>>> Degenera.method = "Z"'
+                                            '\n>>> Degenera.method = "SZ"')
+            if self.method not in method_choices:
                 raise WrongParameterError('Please use one of the following choices for'
-                                          ' the Degenerate.type parameter:'
+                                          ' the Degenerate.method parameter:'
                                           '\n"normal", "S", "Z", or "SZ"')
 
-        if self.type in type_choices and self.table != 1:
-            raise WrongParameterError('The type parameter "normal", "S", "Z",'
+        if self.method in method_choices and self.table != 1:
+            raise WrongParameterError('The method parameter "normal", "S", "Z",'
                                       ' and "SZ" are only compatible with'
                                       ' table = 1 (Standard Genetic code)')
 
     def _choose_genetic_table(self):
         this_table = None
-        if self.table == 1 and self.type == 'normal':
+        if self.table == 1 and self.method == 'normal':
             this_table = tables.degen_table_1
-        elif self.table == 1 and self.type == 'S':
+        elif self.table == 1 and self.method == 'S':
             this_table = tables.degen_S
-        elif self.table == 1 and self.type == 'Z':
+        elif self.table == 1 and self.method == 'Z':
             this_table = tables.degen_Z
-        elif self.table == 1 and self.type == 'SZ':
+        elif self.table == 1 and self.method == 'SZ':
             this_table = tables.degen_SZ
         if self.table == 5:
             this_table = tables.degen_table_5

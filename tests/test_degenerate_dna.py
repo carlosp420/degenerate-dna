@@ -14,7 +14,7 @@ class TestApi(unittest.TestCase):
 
     def test_standard_code_normal(self):
         self.res.table = 1
-        self.res.type = 'normal'
+        self.res.method = 'normal'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -23,7 +23,7 @@ class TestApi(unittest.TestCase):
 
     def test_standard_code_S(self):
         self.res.table = 1
-        self.res.type = 'S'
+        self.res.method = 'S'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -32,7 +32,7 @@ class TestApi(unittest.TestCase):
 
     def test_standard_code_Z(self):
         self.res.table = 1
-        self.res.type = 'Z'
+        self.res.method = 'Z'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -41,7 +41,7 @@ class TestApi(unittest.TestCase):
 
     def test_standard_code_SZ(self):
         self.res.table = 1
-        self.res.type = 'SZ'
+        self.res.method = 'SZ'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -51,7 +51,7 @@ class TestApi(unittest.TestCase):
     def test_degenerate_code_nt1(self):
         self.res.dna = 'ANN'
         self.res.table = 1
-        self.res.type = 'SZ'
+        self.res.method = 'SZ'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -61,7 +61,7 @@ class TestApi(unittest.TestCase):
     def test_long_seq_table_1_normal(self):
         self.res.dna = '??????????aAGACGTGTTGGATGAG?TTGCCGACCTTCCGATCTGTCGGCGACGCCTTGAAAGATGCCTTCGAyGGAGCGTCGCGGGTCATGATGCCC---AACACAGAGTTGGAAGCGCCC---GCT---CAGCGGAACGAT---GCGGCTCCGCACAGAGTCCCGCGAAGAGATCGATACAGATTCCAACTTCGACCGCACAATCCTGACCATAAAACACCCGGGGACAAGGACCTAGTATACTTGGAATCATCGCCGGGTTTCTGCGAAAAGAACCCGAGACTGGGCATTCCCGGTACGCACGGGCGTTCCTGCAACGACACGAGCATCGGCGTCGATGGCTGCGACCTGATGTGCTGTGGCCGGGGGTACCGGACTGAGACGATGTTTGTCGTCGA'
         self.res.table = 1
-        self.res.type = 'normal'
+        self.res.method = 'normal'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -71,7 +71,7 @@ class TestApi(unittest.TestCase):
     def test_long_seq_table_1_S(self):
         self.res.dna = '??????????aAGACGTGTTGGATGAG?TTGCCGACCTTCCGATCTGTCGGCGACGCCTTGAAAGATGCCTTCGAyGGAGCGTCGCGGGTCATGATGCCC---AACACAGAGTTGGAAGCGCCC---GCT---CAGCGGAACGAT---GCGGCTCCGCACAGAGTCCCGCGAAGAGATCGATACAGATTCCAACTTCGACCGCACAATCCTGACCATAAAACACCCGGGGACAAGGACCTAGTATACTTGGAATCATCGCCGGGTTTCTGCGAAAAGAACCCGAGACTGGGCATTCCCGGTACGCACGGGCGTTCCTGCAACGACACGAGCATCGGCGTCGATGGCTGCGACCTGATGTGCTGTGGCCGGGGGTACCGGACTGAGACGATGTTTGTCGTCGA'
         self.res.table = 1
-        self.res.type = 'S'
+        self.res.method = 'S'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -82,7 +82,7 @@ class TestApi(unittest.TestCase):
     def test_long_seq_table_1_Z(self):
         self.res.dna = '??????????aAGACGTGTTGGATGAG?TTGCCGACCTTCCGATCTGTCGGCGACGCCTTGAAAGATGCCTTCGAyGGAGCGTCGCGGGTCATGATGCCC---AACACAGAGTTGGAAGCGCCC---GCT---CAGCGGAACGAT---GCGGCTCCGCACAGAGTCCCGCGAAGAGATCGATACAGATTCCAACTTCGACCGCACAATCCTGACCATAAAACACCCGGGGACAAGGACCTAGTATACTTGGAATCATCGCCGGGTTTCTGCGAAAAGAACCCGAGACTGGGCATTCCCGGTACGCACGGGCGTTCCTGCAACGACACGAGCATCGGCGTCGATGGCTGCGACCTGATGTGCTGTGGCCGGGGGTACCGGACTGAGACGATGTTTGTCGTCGA'
         self.res.table = 1
-        self.res.type = 'Z'
+        self.res.method = 'Z'
         self.res.degenerate()
 
         result = self.res.degenerated
@@ -93,7 +93,7 @@ class TestApi(unittest.TestCase):
     def test_long_seq_table_1_SZ(self):
         self.res.dna = '??????????aAGACGTGTTGGATGAG?TTGCCGACCTTCCGATCTGTCGGCGACGCCTTGAAAGATGCCTTCGAyGGAGCGTCGCGGGTCATGATGCCC---AACACAGAGTTGGAAGCGCCC---GCT---CAGCGGAACGAT---GCGGCTCCGCACAGAGTCCCGCGAAGAGATCGATACAGATTCCAACTTCGACCGCACAATCCTGACCATAAAACACCCGGGGACAAGGACCTAGTATACTTGGAATCATCGCCGGGTTTCTGCGAAAAGAACCCGAGACTGGGCATTCCCGGTACGCACGGGCGTTCCTGCAACGACACGAGCATCGGCGTCGATGGCTGCGACCTGATGTGCTGTGGCCGGGGGTACCGGACTGAGACGATGTTTGTCGTCGA'
         self.res.table = 1
-        self.res.type = 'SZ'
+        self.res.method = 'SZ'
         self.res.degenerate()
 
         result = self.res.degenerated

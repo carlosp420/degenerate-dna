@@ -80,7 +80,7 @@ class Degenera(object):
                                           ' the Degenerate.method parameter:'
                                           '\n"normal", "S", "Z", or "SZ"')
 
-        if self.method in method_choices and self.table != 1:
+        if self.method in ['S', 'Z', 'SZ'] and self.table != 1:
             raise WrongParameterError('The method parameter "normal", "S", "Z",'
                                       ' and "SZ" are only compatible with'
                                       ' table = 1 (Standard Genetic code)')

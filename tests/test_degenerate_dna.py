@@ -111,6 +111,16 @@ class TestApi(unittest.TestCase):
 
         self.assertEqual(expected, result)
 
+    def test_long_seq_table_5_normal(self):
+        self.res.dna = '?ACTTTATATTTTATTTTTGGAATTTGAGCAG'
+        self.res.table = 5
+        self.res.method = 'normal'
+        self.res.degenerate()
+
+        result = self.res.degenerated
+        expected =     'NNNTTYATRTTYTAYTTYTGRAAYYTNAGNAG'
+        self.assertEqual(expected, result)
+
     def test_incomplete_seq_table_5(self):
         self.res.dna = '?ACTTTATATTTTATTTTTGGAATTTGAGCAG'
         self.res.table = 5

@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="degenerate-dna",
-    version="0.0.5",
+    version="0.0.6",
     url="https://github.com/carlosp420/degenerate-dna",
 
     author="Carlos Pena",

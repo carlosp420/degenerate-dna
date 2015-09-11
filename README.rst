@@ -15,6 +15,7 @@ http://www.phylotools.com/ptdegenoverview.htm
 
 Usage
 -----
+.. code:: python
 
     >>> from degenerate_dna import Degenera
     >>> dna = 'AGTTCT'
@@ -25,6 +26,7 @@ Usage
 
 Installation
 ------------
+.. code:: shell
 
     pip install degenerate-dna
 

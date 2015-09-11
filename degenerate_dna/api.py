@@ -86,20 +86,18 @@ class Degenera(object):
                                       ' table = 1 (Standard Genetic code)')
 
     def _choose_genetic_table(self):
-        this_table = None
-        if self.table == 1 and self.method == 'normal':
-            this_table = tables.degen_table_1
-        elif self.table == 1 and self.method == 'S':
-            this_table = tables.degen_S
-        elif self.table == 1 and self.method == 'Z':
-            this_table = tables.degen_Z
-        elif self.table == 1 and self.method == 'SZ':
-            this_table = tables.degen_SZ
+        methods = {
+            'normal': tables.degen_table_1,
+            'S': tables.degen_S,
+            'Z': tables.degen_Z,
+            'SZ': tables.degen_SZ,
+        }
         if self.table == 5:
-            this_table = tables.degen_table_5
-        if this_table is None:
+            return tables.degen_table_5
+        elif self.table == 1:
+            return methods[self.method]
+        else:
             raise WrongParameterError('Only table 1 and 5 are implemented so far.')
-        return this_table
 
     def _convert_to_nnn_if_ambiguous_nt1_nt2(self, tmp_codon):
         value = self._clean_string(tmp_codon)

@@ -68,17 +68,16 @@ class Degenera(object):
         if self.table is None:
             raise MissingParameterError('Please enter a NCBI table code as input:'
                                         '\n>>> Degenera.table = 1')
-        if self.table == 1:
-            if self.method is None:
-                raise MissingParameterError('Please enter a method of Degenerate code:'
-                                            '\n>>> Degenera.method = "normal"'
-                                            '\n>>> Degenera.method = "S"'
-                                            '\n>>> Degenera.method = "Z"'
-                                            '\n>>> Degenera.method = "SZ"')
-            if self.method not in method_choices:
-                raise WrongParameterError('Please use one of the following choices for'
-                                          ' the Degenerate.method parameter:'
-                                          '\n"normal", "S", "Z", or "SZ"')
+        if self.table == 1 and self.method is None:
+            raise MissingParameterError('Please enter a method of Degenerate code:'
+                                        '\n>>> Degenera.method = "normal"'
+                                        '\n>>> Degenera.method = "S"'
+                                        '\n>>> Degenera.method = "Z"'
+                                        '\n>>> Degenera.method = "SZ"')
+        if self.table == 1 and self.method not in method_choices:
+            raise WrongParameterError('Please use one of the following choices for'
+                                      ' the Degenerate.method parameter:'
+                                      '\n"normal", "S", "Z", or "SZ"')
 
         if self.method in ['S', 'Z', 'SZ'] and self.table != 1:
             raise WrongParameterError('The method parameter "normal", "S", "Z",'

@@ -6,6 +6,11 @@
    :target: https://travis-ci.org/carlosp420/degenerate-dna
    :alt: Latest Travis CI build status
 
+.. image:: https://coveralls.io/repos/carlosp420/degenerate-dna/badge.svg?branch=master&service=github
+   :target: https://coveralls.io/github/carlosp420/degenerate-dna?branch=master
+   :alt: Coveralls
+
+
 degenerate-dna
 ==============
 

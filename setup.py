@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="degenerate-dna",
-    version="0.0.6",
+    version="0.0.7",
     url="https://github.com/carlosp420/degenerate-dna",
 
     author="Carlos Pena",
@@ -19,7 +19,7 @@ setuptools.setup(
 
     classifiers=[
         'License :: OSI Approved :: BSD License',
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',

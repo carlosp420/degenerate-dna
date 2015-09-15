@@ -1,21 +1,47 @@
-.. image:: https://badge.fury.io/py/degenerate-dna.svg
+degenerate-dna
+==============
+
+.. list-table::
+    :stub-columns: 1
+
+    * - tests
+      - | |travis| |requires| |coveralls|
+        | |quantified-code|
+    * - package
+      - |version| |wheel| |supported-versions| |supported-implementations|
+
+.. |travis| image:: https://travis-ci.org/carlosp420/degenerate-dna.svg?branch=master
+    :alt: Travis-CI Build Status
+    :target: https://travis-ci.org/carlosp420/degenerate-dna
+
+.. |requires| image:: https://requires.io/github/carlosp420/degenerate-dna/requirements.svg?branch=master
+    :alt: Requirements Status
+    :target: https://requires.io/github/carlosp420/degenerate-dna/requirements/?branch=master
+
+.. |coveralls| image:: https://coveralls.io/repos/carlosp420/degenerate-dna/badge.svg?branch=master&service=github
+    :alt: Coverage Status
+    :target: https://coveralls.io/r/carlosp420/degenerate-dna
+
+.. |version| image:: https://img.shields.io/pypi/v/degenerate-dna.svg?style=flat
+    :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/degenerate-dna
-    :alt: Latest PyPI version
 
-.. image:: https://travis-ci.org/carlosp420/degenerate-dna.png
-   :target: https://travis-ci.org/carlosp420/degenerate-dna
-   :alt: Latest Travis CI build status
+.. |wheel| image:: https://img.shields.io/pypi/wheel/degenerate-dna.svg?style=flat
+    :alt: PyPI Wheel
+    :target: https://pypi.python.org/pypi/degenerate-dna
 
-.. image:: https://coveralls.io/repos/carlosp420/degenerate-dna/badge.svg?branch=master&service=github
-   :target: https://coveralls.io/github/carlosp420/degenerate-dna?branch=master
-   :alt: Coveralls
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/degenerate-dna.svg?style=flat
+    :alt: Supported versions
+    :target: https://pypi.python.org/pypi/degenerate-dna
 
-.. image:: https://www.quantifiedcode.com/api/v1/project/fdd4eceac24d47adb5b9e73f475de560/badge.svg
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/degenerate-dna.svg?style=flat
+    :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/degenerate-dna
+
+.. |quantified-code| image:: https://www.quantifiedcode.com/api/v1/project/fdd4eceac24d47adb5b9e73f475de560/badge.svg
    :target: https://www.quantifiedcode.com/app/project/fdd4eceac24d47adb5b9e73f475de560
    :alt: Code issues
 
-degenerate-dna
-==============
 
 Python implementation of the Degen Perl package by Zwick et al.
 

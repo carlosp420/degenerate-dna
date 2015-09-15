@@ -66,7 +66,7 @@ Installation
 
 Requirements
 ^^^^^^^^^^^^
-python +3
+python 2.6, 2.7, 3.3, 3.4, 3.5
 
 Licence
 -------

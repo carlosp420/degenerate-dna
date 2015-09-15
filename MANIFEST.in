@@ -1,0 +1,14 @@
+graft degenerate_dna
+graft docs
+graft tests
+
+include .travis.yml
+include HISTORY.rst
+include LICENSE
+include Makefile
+include README.rst
+include setup.py
+include tox.ini
+include requirements-test.txt
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib

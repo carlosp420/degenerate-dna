@@ -1,0 +1,12 @@
+include *.in
+include *.rst
+include *.txt
+include LICENSE
+include Makefile
+include tox.ini
+recursive-include docs *.py
+recursive-include docs *.rst
+recursive-include docs Makefile
+recursive-include degenerate_dna *.py
+
+global-exclude *.py[cod] __pycache__ *.so *.dylib
